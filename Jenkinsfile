@@ -13,6 +13,7 @@ pipeline {
 	stages {
 		stage('Test') {
 			steps {
+				sh "printenv"
 				fastlane 'quick_test'
 			}
 		}
