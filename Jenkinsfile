@@ -10,6 +10,9 @@ def fastlane(lane) {
 
 pipeline {
 	agent any
+	environment {
+		APPBOTTOKEN = credentials('APPBOTTOKEN')
+	}
 	stages {
 		stage('Test') {
 			steps {
