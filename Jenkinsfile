@@ -9,6 +9,7 @@ def fastlane(lane) {
 }
 
 pipeline {
+	agent { any }
 	stages {
 		stage('Test') {
 			steps {
