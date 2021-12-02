@@ -18,8 +18,7 @@ default_platform(:ios)
 before_all do |lane, options|
 	import_from_git(
 		url: "git@github.com:doubleencore/POM-Fastlane-Tools.git",
-		branch: "FTL-0003",
-		dependencies: ["fastlane/iOS/Fastfile"]
+		branch: "FTL-0003"
 	)
 end
 
@@ -27,7 +26,7 @@ platform :ios do
 
 	desc "Description of what the lane does"
 	lane :quick_test do
-		token = ENV['APPBOTTOKEN']
+		token = ENV['APPBOT_TOKEN']
 		value = appbot_build_number(
 			api_token: token,
 			name: "NOBU-iOS"
